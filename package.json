@@ -1,0 +1,25 @@
+{
+  "name": "nodejsexpress_part2",
+  "version": "1.0.0",
+  "description": "Simple study example.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakobbaumgartner/NodeJSExpress_part2.git"
+  },
+  "author": "JB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakobbaumgartner/NodeJSExpress_part2/issues"
+  },
+  "homepage": "https://github.com/jakobbaumgartner/NodeJSExpress_part2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
