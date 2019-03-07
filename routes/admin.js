@@ -7,6 +7,7 @@ const router = express.Router()
 // Express nam omogoča, da routanje izvedemo s pomočjo route elementa, ki se obnaša podobno kot app
 // element le, da nam omogoča lažje exportanje v app.js datoteko. 
 
+
 router.get('/newadded', (req, res, next) => {
     res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'))
 })

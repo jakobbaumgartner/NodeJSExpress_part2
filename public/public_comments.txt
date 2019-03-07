@@ -1,0 +1,10 @@
+Datoteke in mape na serverju običajno niso na voljo uporabniku. Izjema so datoteke, ki se nahajajo v mapi 
+public (ime je konvencija, lahko drugačno). 
+
+ Da mapa public postane vidna javnosti - static uporabimo naslednji middleware v app.js:
+
+ app.use(express.static(path.join(__dirname, 'public')))
+
+ Express bo sedaj vsako zahtevo po datotekah preusmeril direktno v public mapo.
+
+ Lahko dodamo več "public folders".

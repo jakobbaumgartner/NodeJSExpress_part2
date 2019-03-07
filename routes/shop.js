@@ -5,10 +5,12 @@ const path = require('path')
 
 const router = express.Router()
 
+const rootDir = require('../util/path')
+
 //pomembno je, da uporabimo get metodo, da saj drugače preprečimo error 404
 
 router.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'))
+    res.sendFile(path.join(rootDir, 'views', 'shop.html'))
 })
 
 // Če bi uporabili le /views/shop.html bi nodejs gledal v root directory na računalniku in ne bi našel datoteke

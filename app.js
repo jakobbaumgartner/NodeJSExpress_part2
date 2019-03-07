@@ -3,8 +3,12 @@ const express = require('express')
 const bpar = require('body-parser')
 // npm install body-parser
 
+const path = require('path')
 
 const app = express()
+
+app.use(express.static(path.join(__dirname, 'public')))
+//za static files (CSS ...)
 
 //importamo routes datoteke
 const adminRoutes = require('./routes/admin')
@@ -13,7 +17,7 @@ const shopRoutes = require('./routes/shop')
 app.use(bpar.urlencoded({extended: false}))
 //tako naredimo middleware, ki parse body in nato kliče next, na naslednjo funkcijo
 
-app.use(adminRoutes)
+app.use('/admin',adminRoutes)
 //uporabimo routes v routes files
 
 app.use(shopRoutes)
